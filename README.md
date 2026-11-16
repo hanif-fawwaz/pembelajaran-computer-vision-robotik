@@ -247,6 +247,6 @@ python 12_capstone_robot_vision_controller_pid.py
 ---
 
 ## 👥 Kontributor & Acknowledgments
-- **Hanif Fawwaz** ([@hanif-fawwaz](https://github.com/hanif-fawwaz)) - Inisiator, Pengembang & Desain Kurikulum Modul
+- **Hanif Arib Fawwaz** ([@hanif-fawwaz](https://github.com/hanif-fawwaz)) - Inisiator, Pengembang & Desain Kurikulum Modul
 - **Antigravity AI (Google DeepMind)** - AI Pair Programmer & Arsitektur Modul Pembelajaran Robotika Vision
 
