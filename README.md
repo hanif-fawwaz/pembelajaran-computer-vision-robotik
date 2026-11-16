@@ -243,3 +243,10 @@ python 12_capstone_robot_vision_controller_pid.py
 ```
 
 > 💡 **Fitur Plug-and-Play Otomatis:** Semua modul video (08, 11, dan 12) memiliki fitur fallback cerdas. Jika webcam komputer tidak aktif/tidak ada, program otomatis memutar video simulasi yang disediakan di folder `images/` sehingga siapa pun yang mendownload repositori GitHub Anda dapat langsung mempraktikkannya tanpa error!
+
+---
+
+## 👥 Kontributor & Acknowledgments
+- **Hanif Fawwaz** ([@hanif-fawwaz](https://github.com/hanif-fawwaz)) - Inisiator, Pengembang & Desain Kurikulum Modul
+- **Antigravity AI (Google DeepMind)** - AI Pair Programmer & Arsitektur Modul Pembelajaran Robotika Vision
+
