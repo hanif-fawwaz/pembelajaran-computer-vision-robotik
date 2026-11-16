@@ -92,7 +92,7 @@ Dependensi:
 Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku teks, dan paper ilmiah** untuk memperdalam materi setiap modul:
 
 ### 🔹 Modul 01: Pengenalan Citra Digital, Piksel, dan I/O OpenCV
-* **Konsep Inti:** Citra digital sebagai matriks angka multidimensi (NumPy Array), resolusi ($W \times H$), koordinat kartesius terbalik OpenCV (sumbu Y mengarah ke bawah), serta fungsi I/O dasar (`imread`, `imshow`, `imwrite`, `waitKey`).
+* **Konsep Inti:** Citra digital sebagai matriks angka multidimensi (NumPy Array), resolusi `(Width x Height)`, koordinat kartesius terbalik OpenCV (sumbu Y mengarah ke bawah), serta fungsi I/O dasar (`imread`, `imshow`, `imwrite`, `waitKey`).
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Getting Started with Images](https://docs.opencv.org/4.x/db/deb/tutorial_display_image.html)
   * [PyImageSearch: Loading and Displaying Images with OpenCV](https://pyimagesearch.com/2021/01/20/opencv-load-image-cv2-imread/)
@@ -119,7 +119,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 04: Segmentasi Warna HSV dan Pelacakan Objek (Centroid)
-* **Konsep Inti:** Isolasi rentang warna (`cv2.inRange`); Operasi logika piksel `cv2.bitwise_and`; Ekstraksi kontur luar (`cv2.findContours`); Momen citra (Image Moments) untuk menghitung koordinat titik pusat massa ($cx = M_{10}/M_{00}, cy = M_{01}/M_{00}$).
+* **Konsep Inti:** Isolasi rentang warna (`cv2.inRange`); Operasi logika piksel `cv2.bitwise_and`; Ekstraksi kontur luar (`cv2.findContours`); Momen citra (Image Moments) untuk menghitung koordinat titik pusat massa: `cx = M10 / M00` dan `cy = M01 / M00`.
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Image Moments & Contours](https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html)
   * [PyImageSearch: Ball Tracking with OpenCV](https://pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/)
@@ -137,7 +137,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 06: Kontur, Operasi Morfologi, Bounding Box, dan Shape Detection
-* **Konsep Inti:** Morfologi matematika (Opening = Erosi dilanjut Dilatasi untuk melenyapkan noise; Closing = Dilatasi dilanjut Erosi untuk menutup lubang objek); Bounding Box tegak vs Bounding Box berotasi (`minAreaRect`) untuk sudut orientasi capit robot; Aproksimasi kurva poligon Douglas-Peucker (`cv2.approxPolyDP`) dan metrik circularity ($\frac{4\pi A}{P^2}$).
+* **Konsep Inti:** Morfologi matematika (Opening = Erosi dilanjut Dilatasi untuk melenyapkan noise; Closing = Dilatasi dilanjut Erosi untuk menutup lubang objek); Bounding Box tegak vs Bounding Box berotasi (`minAreaRect`) untuk sudut orientasi capit robot; Aproksimasi kurva poligon Douglas-Peucker (`cv2.approxPolyDP`) dan metrik kebundaran (Circularity = `(4 * pi * Area) / (Keliling^2)`).
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Morphological Transformations](https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html)
   * [Dokumentasi Resmi OpenCV: Structural Analysis & Shape Descriptors](https://docs.opencv.org/4.x/d3/dc0/group__imgproc__shape.html)
@@ -146,7 +146,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 07: Operasi Geometri & Transformasi Spasial (Bird's Eye View)
-* **Konsep Inti:** Algoritma interpolasi citra (`INTER_AREA` untuk downscaling cepat tanpa moiré vs `INTER_CUBIC` untuk perbesaran halus); Pemotongan Region of Interest (ROI); Matriks Affine $2 \times 3$ (translasi & rotasi sudut bebas); Matriks Homografi Perspektif $3 \times 3$ (`warpPerspective`) untuk mengubah sudut pandang miring kamera menjadi tegak lurus dari atas (*Inverse Perspective Mapping*).
+* **Konsep Inti:** Algoritma interpolasi citra (`INTER_AREA` untuk downscaling cepat tanpa moiré vs `INTER_CUBIC` untuk perbesaran halus); Pemotongan Region of Interest (ROI); Matriks Affine 2x3 (translasi & rotasi sudut bebas); Matriks Homografi Perspektif 3x3 (`warpPerspective`) untuk mengubah sudut pandang miring kamera menjadi tegak lurus dari atas (*Inverse Perspective Mapping*).
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Geometric Transformations of Images](https://docs.opencv.org/4.x/da/d54/tutorial_py_geometric_transformations.html)
   * [PyImageSearch: 4 Point OpenCV getPerspectiveTransform Example](https://pyimagesearch.com/2014/08/25/4-point-opencv-getperspectivetransform-example/)
@@ -155,7 +155,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 08: Pemrosesan Video & Kamera Webcam Real-Time dengan FPS Counter
-* **Konsep Inti:** Pengambilan aliran frame video kontinu (`cv2.VideoCapture`); Perhitungan FPS instan dan rata-rata bergerak (*moving average*); Pengukuran latensi komputasi per frame (ms) agar tidak memperlambat kendali aktuator robot ($>30\text{ FPS}$); Heads-Up Display (HUD) overlay teks dan keyboard events.
+* **Konsep Inti:** Pengambilan aliran frame video kontinu (`cv2.VideoCapture`); Perhitungan FPS instan dan rata-rata bergerak (*moving average*); Pengukuran latensi komputasi per frame (ms) agar tidak memperlambat kendali aktuator robot (target >= 30 FPS); Heads-Up Display (HUD) overlay teks dan keyboard events.
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Getting Started with Videos](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html)
   * [PyImageSearch: Increasing webcam FPS with Python and OpenCV](https://pyimagesearch.com/2015/12/21/increasing-webcam-fps-with-python-and-opencv/)
@@ -164,7 +164,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 09: Deteksi Garis (Line Tracking) Menggunakan Hough Line Transform
-* **Konsep Inti:** Teori ruang akumulator Hesse ($r = x\cos\theta + y\sin\theta$); Probabilistic Hough Lines (`cv2.HoughLinesP`); Masking poligon trapesium jalan; Klasifikasi garis marka kiri vs kanan berbasis gradien kemiringan ($m = \Delta y / \Delta x$); Estimasi sudut kemudi (*Steering Angle*) dan deviasi offset untuk mobil otonom / AGV.
+* **Konsep Inti:** Teori ruang akumulator Hesse `r = x*cos(theta) + y*sin(theta)`; Probabilistic Hough Lines (`cv2.HoughLinesP`); Masking poligon trapesium jalan; Klasifikasi garis marka kiri vs kanan berbasis gradien kemiringan (Slope `m = dy / dx`); Estimasi sudut kemudi (*Steering Angle*) dan deviasi offset untuk mobil otonom / AGV.
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Hough Line Transform](https://docs.opencv.org/4.x/d9/db0/tutorial_hough_lines.html)
   * [Towards Data Science: Finding Lane Lines Simple Pipeline (Udacity Self-Driving Car Nanodegree)](https://towardsdatascience.com/finding-lane-lines-simple-pipeline-f191a3294f33)
@@ -173,7 +173,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 10: Deteksi Lingkaran & Bola Menggunakan Hough Circle Transform
-* **Konsep Inti:** Persamaan lingkaran $(x - a)^2 + (y - b)^2 = r^2$; Metode 2-1 Hough Gradient (`cv2.HOUGH_GRADIENT`) yang memanfaatkan gradien tepi untuk memprediksi pusat bundar; Filter parameter `param1`, `param2`, dan radius range; Model kamera lubang jarum (*Pinhole Camera Model*) untuk mengestimasi jarak fisik bola dalam centimeter ($cm$).
+* **Konsep Inti:** Persamaan lingkaran `(x - a)^2 + (y - b)^2 = r^2`; Metode 2-1 Hough Gradient (`cv2.HOUGH_GRADIENT`) yang memanfaatkan gradien tepi untuk memprediksi pusat bundar; Filter parameter `param1`, `param2`, dan radius range; Model kamera lubang jarum (*Pinhole Camera Model*) untuk mengestimasi jarak fisik bola dalam centimeter (cm).
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: Hough Circle Transform](https://docs.opencv.org/4.x/d4/d70/tutorial_hough_circle.html)
   * [PyImageSearch: Find Distance from Camera to Object/Marker using OpenCV](https://pyimagesearch.com/2015/01/19/find-distance-camera-objectmarker-using-python-opencv/)
@@ -182,7 +182,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 11: Deteksi Gerakan (Motion Detection & Background Subtraction MOG2)
-* **Konsep Inti:** Frame Differencing dasar ($|\text{Frame}_t - \text{Frame}_{t-1}|$); Model adaptif Mixture of Gaussians (MOG2); Eliminasi bayangan dinamis (*Shadow Rejection* nilai 127); Pemfilteran noise kontur gerak untuk sistem alarm keamanan sentri robot (*Robot Security Alarm*).
+* **Konsep Inti:** Frame Differencing dasar (Selisih absolut `|Frame(t) - Frame(t-1)|`); Model adaptif Mixture of Gaussians (MOG2); Eliminasi bayangan dinamis (*Shadow Rejection* nilai 127); Pemfilteran noise kontur gerak untuk sistem alarm keamanan sentri robot (*Robot Security Alarm*).
 * **📚 Sumber Belajar Lanjutan:**
   * [Dokumentasi Resmi OpenCV: How to Use Background Subtraction Methods](https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html)
   * *Paper Orisinal:* Zoran Zivkovic (2004), *"Improved adaptive Gaussian mixture model for background subtraction"*, International Conference on Pattern Recognition (ICPR).
@@ -191,7 +191,7 @@ Berikut adalah pembahasan konsep inti beserta **sumber dokumentasi resmi, buku t
 ---
 
 ### 🔹 Modul 12 (Capstone): Robot Vision Controller Terpadu dengan PID & Protokol Serial
-* **Konsep Inti:** Desain arsitektur *vision-guided robotics*; Algoritma kendali umpan balik PID ($K_p, K_i, K_d$) dengan *anti-windup clamping*; Penerapan zona toleransi (*deadzone*) untuk meredam jitter motor; Desain struktur paket komunikasi serial UART (`<CMD, STEER, THROTTLE, FLAG>`) untuk mikrokontroler (Arduino/ESP32/ROS); Tampilan kokpit HUD lengkap.
+* **Konsep Inti:** Desain arsitektur *vision-guided robotics*; Algoritma kendali umpan balik PID (`Kp, Ki, Kd`) dengan *anti-windup clamping*; Penerapan zona toleransi (*deadzone*) untuk meredam jitter motor; Desain struktur paket komunikasi serial UART (`<CMD, STEER, THROTTLE, FLAG>`) untuk mikrokontroler (Arduino/ESP32/ROS); Tampilan kokpit HUD lengkap.
 * **📚 Sumber Belajar Lanjutan:**
   * [ArduPilot / PID Control Theory: Understanding PID Controllers in Robotics](https://ardupilot.org/copter/docs/tuning.html)
   * [MATLAB & Simulink: Understanding PID Control, Part 1: What is PID?](https://www.youtube.com/watch?v=UR0hOmjaHp0)
